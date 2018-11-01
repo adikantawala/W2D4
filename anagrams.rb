@@ -15,3 +15,26 @@ def second_anagram?(str1,str2)
   end
   str2 == "" ? true : false
 end
+
+def third_anagram(str1, str2)
+
+  return str1.chars.sort == str2.chars.sort
+
+end
+
+def fourth_anagram?(str1,str2)
+
+  hash1 = Hash.new(0)
+  hash2 = Hash.new(0)
+
+  str1.chars.each do |letter|
+    hash1[letter] += 1
+  end
+
+  str2.chars.each do |letter|
+    hash2[letter] += 1
+  end
+
+  hash1 == hash2
+  
+end
